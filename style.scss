@@ -1,0 +1,125 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+$white:hsl(0, 0%, 100%);
+$bgColor: hsl(30, 38%, 92%);
+$priceColor: hsl(158, 36%, 37%);
+$headingColor: hsl(212, 21%, 14%);
+$textColor: hsl(228, 12%, 48%);
+
+body {
+    font-size: 14px;
+    font-family: 'Montserrat',
+        sans-serif;
+    background-color: $bgColor;
+    padding: 0 1rem;
+}
+
+.container {
+    max-width: 820px;
+    margin: 5vh auto 1vh;
+}
+
+main {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    border-radius: 1rem;
+    overflow: hidden;
+
+    .image,
+    .content {
+        min-height: 290px;
+        flex: 0 1 410px;
+    }
+}
+
+.image {
+    background-image: url(/images/image-product-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+@media screen and (max-width:768px) {
+    .image {
+        background-image: url(/images/image-product-mobile.jpg);
+    }
+
+}
+
+.content {
+    padding: 2.5rem;
+    background-color: $white;
+
+    &__top {
+        color: $textColor;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+
+    &__heading {
+        font-size: calc(1.3rem + 1.5vw);
+        line-height: 100%;
+        margin-bottom: calc(1rem + 1.5vw);
+        font-weight: 700;
+        font-family: 'Fraunces',
+            serif;
+    }
+
+    &__text {
+        color: $textColor;
+        line-height: 150%;
+        font-size: calc(1rem + 0.1vw);
+        margin-bottom: 2rem;
+    }
+
+    &__btn {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        gap: 1rem;
+        background-color: $priceColor;
+        color: $white;
+        font-weight: 700;
+        outline: none;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        padding: 1rem 0;
+    }
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 10%;
+
+    &__big {
+        font-family: 'Fraunces',
+            serif;
+        color: $priceColor;
+        font-size: 2.5rem;
+    }
+
+    &__del {
+        font-weight: 400;
+        text-decoration: line-through;
+        font-size: 80%;
+        font-weight: 400;
+    }
+
+}
