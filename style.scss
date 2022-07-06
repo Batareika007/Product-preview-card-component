@@ -45,7 +45,7 @@ main {
 }
 
 .image {
-    background-image: url(/images/image-product-desktop.jpg);
+    background-image: url(../images/image-product-desktop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -54,7 +54,7 @@ main {
 
 @media screen and (max-width:768px) {
     .image {
-        background-image: url(/images/image-product-mobile.jpg);
+        background-image: url(../images/image-product-mobile.jpg);
     }
 
 }
